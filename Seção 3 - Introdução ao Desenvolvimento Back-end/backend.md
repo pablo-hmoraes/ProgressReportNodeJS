@@ -10,7 +10,7 @@ Para ser um programador back-end é crucial conhecer, de maneira geral, o funcio
 
 A web segue a **arquitetura cliente-servidor**, onde clientes fazem requisições a servidores. Os servidores, por sua vez, retornam as respostas solicitadas aos clientes. A comunicação entre cliente e servidor é feita através do protocolo **HTTP (HyperText Transfer Protocol)**. 
 
-![funcionamento da web](.\imagens\web-http.png)
+![funcionamento da web](./imagens/web-http.png)
 
 Os aspectos do funcionamento do HTTP podem ser explicados da seguinte forma: 
 - **Requisição e resposta:** o cliente (geralmente um navegador) envia uma requisição HTTP a um servidor, que então processa a requisição e envia uma resposta ao cliente.
