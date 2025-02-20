@@ -9,14 +9,14 @@ O Node.js é possui uma arquitetura _single-threaded_, o que significa que ela p
 
 ### 2. Event Loop
 
-Como o Node.js é single-threaded, um empecilho que pode aparecer é o de bloqueio da thread, fazendo com que o programa tenha uma performance lenta. O Node.js resolve isso com o **Event Loop**. O Event Loop permite ao Node.js gerenciar múltiplas operções ao mesmo tempo sem precisar que uma operação termine antes de inicar outra. Ele obtém isso através de eventos e callbacks. 
+Como o Node.js é single-threaded, um empecilho que pode aparecer é o de bloqueio da thread, fazendo com que o programa tenha uma performance lenta. O Node.js resolve isso com o **Event Loop**. O Event Loop permite ao Node.js gerenciar múltiplas operações ao mesmo tempo sem precisar que uma operação termine antes de inicar outra. Ele obtém isso através de eventos e callbacks. 
 
 Os eventos são disparados quando certas ações são realizadas, como o recebimento de uma requsição HTTP, o fim de leitura de um arquivo, etc. Esses eventos são notificados ao Event Loop (por isso é dito que o Node.js possui uma arquitetura Event-Driven), que por sua vez executa a função callback especificada pelo programador.
 
 O Event Loop possui 4 fases, que são executadas na seguinte ordem:
 
 1. **Expired timer callbacks:** lida com os callbacks de funções do tipo timer como `setTimeout()`, por exemplo.
-2. **I/O polling and callbacks:** lida com o infileiramento e execução de funções de I/O e de rede, como acesso de arquivos.
+2. **I/O polling and callbacks:** lida com o enfileiramento e execução de funções de I/O e de rede, como acesso de arquivos.
 3. **setImmediate callbacks:** executa apenas instâncias da função `setImmediate()`, que pode ser útil em alguns casos mais avançados.
 4. **Closed callbacks:** lida com funções de fechamento, como o fechamento de um servidor web.
 
